@@ -1,33 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NoteKeeper.MainPage">
-
-    <StackLayout
-        Margin="10,10,10,10"
-        Spacing="20"
-        Padding="15"
-        >
-        <Editor 
-            Placeholder="Title" 
-            x:Name="noteTitle"
-            FontSize="Medium"/>
-        <Picker Title="Note Categy" 
-                FontSize="Medium"
-                x:Name="noteTypes">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Course 1</x:String>
-                    <x:String>Course 2</x:String>
-                    <x:String>Course 3</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        <Editor 
-            Placeholder="Content" 
-            x:Name="noteContent" 
-            FontSize="Medium"
-            AutoSize="TextChanges"/>
-    </StackLayout>
-
+             x:Class="NoteKeeper.MainPage"
+             Title="Note Keeper">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Note" Clicked="AddNote_Clicked" />
+    </ContentPage.ToolbarItems>
 </ContentPage>
