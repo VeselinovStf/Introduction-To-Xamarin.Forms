@@ -4,8 +4,8 @@
              x:Class="NoteKeeper.Views.NoteDetailsPage"
              Title="Add Note">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save" Clicked="SaveNote_Clicked"/>
         <ToolbarItem Text="Cancel" Clicked="CancelNote_Clicked"/>
+        <ToolbarItem Text="Save" Clicked="SaveNote_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout

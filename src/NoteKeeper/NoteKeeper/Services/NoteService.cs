@@ -20,5 +20,10 @@ namespace NoteKeeper.Services
         {
             return this._noteRepository.GetAll();
         }
+
+        public void AddNote(Note newNote)
+        {
+            _noteRepository.Add(newNote);
+        }
     }
 }

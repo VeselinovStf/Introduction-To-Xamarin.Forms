@@ -16,16 +16,21 @@ namespace NoteKeeper.Views
             ViewModel = viewModel;
 
             BindingContext = this.ViewModel;
+
+            Title = ViewModel.Title;
         }
 
-        private void CancelNote_Clicked(object sender, System.EventArgs e)
+        private async void CancelNote_Clicked(object sender, System.EventArgs e)
         {
-            DisplayAlert("Saving Canceled", "You Cancel Note Save", "Ok","Cancel");
+            await Navigation.PopModalAsync();
         }
 
-        private void SaveNote_Clicked(object sender, System.EventArgs e)
+        private async void SaveNote_Clicked(object sender, System.EventArgs e)
         {
-            DisplayAlert("Saving", "You Want to save new note", "Ok", "Cancel");
+            MessagingCenter.Send(this, "SaveNote", ViewModel);
+
+
+            await Navigation.PopModalAsync();
 
         }
     }

@@ -14,6 +14,11 @@ namespace NoteKeeper.Data
             _dbContext = dbContext;
         }
 
+        public void Add(NoteType newNoteType)
+        {
+            _dbContext.NoteTypes.Add(newNoteType);
+        }
+
         public IList<NoteType> GetAll()
         {          
                 return this._dbContext.NoteTypes;            

@@ -17,5 +17,10 @@ namespace NoteKeeper.Data
         {
             return this._dbContext.Notes;
         }
+
+        public void Add(Note newNote)
+        {
+            _dbContext.Notes.Add(newNote);
+        }
     }
 }

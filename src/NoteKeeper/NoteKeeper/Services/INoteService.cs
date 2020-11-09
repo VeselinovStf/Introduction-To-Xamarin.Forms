@@ -6,5 +6,7 @@ namespace NoteKeeper.Services
     public interface INoteService
     {
         IList<Note> GetAllNotes();
+        void AddNote(Note newNote);
+
     }
 }

@@ -12,6 +12,7 @@ namespace NoteKeeper.ViewModels
         
         public List<NoteType> NoteTypes { get; private set; }
         private Note Note { get; }
+        public string Title { get; }
 
         public NoteDetailsViewModel(Note note = null)
         {
@@ -22,10 +23,12 @@ namespace NoteKeeper.ViewModels
             if (note != null)
             {
                 Note = note;
+                Title = "Edit Note";
             }
             else
             {
                 Note = new Note() { Text = "", Title = "" };
+                Title = "Add Note";
             }
             
 

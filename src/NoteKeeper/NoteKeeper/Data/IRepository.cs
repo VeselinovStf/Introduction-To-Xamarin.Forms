@@ -6,5 +6,7 @@ namespace NoteKeeper.Data
     public interface IRepository<T>
     {
         IList<T> GetAll();
+
+        void Add(T entityToAdd);
     }
 }

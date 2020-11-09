@@ -43,7 +43,7 @@ namespace NoteKeeper
                 return;
             }
 
-            await Navigation.PushAsync(new NoteDetailsPage(new NoteDetailsViewModel(note)));
+            await Navigation.PushModalAsync(new NavigationPage(new NoteDetailsPage(new NoteDetailsViewModel(note))));
 
             ItemsListView.SelectedItem = null;
         }
