@@ -13,18 +13,18 @@
         Spacing="20"
         Padding="15"
         >
-            <Editor Text="{Binding SelectedNote.Title}"
+            <Editor Text="{Binding NoteTitle, Mode=TwoWay}"
             Placeholder="Title" 
             x:Name="noteTitle"
             FontSize="Medium"/>
             <Picker Title="Note Categy" 
                     ItemsSource="{Binding NoteTypes}"  
-                    SelectedItem="{Binding SelectedNote.NoteType}"
+                    SelectedItem="{Binding Note.NoteType}"
                 FontSize="Medium"
                 x:Name="noteTypes"/>
 
             <Editor 
-                Text="{Binding SelectedNote.Text}"
+                Text="{Binding NoteText}"
             Placeholder="Content" 
             x:Name="noteContent" 
             FontSize="Medium"

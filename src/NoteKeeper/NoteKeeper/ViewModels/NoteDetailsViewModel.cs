@@ -6,44 +6,50 @@ using System.Linq;
 
 namespace NoteKeeper.ViewModels
 {
-    public class NoteDetailsViewModel
+    public class NoteDetailsViewModel : BaseViewModel
     {
         private readonly NoteTypeService NoteTypeService;
 
         public List<NoteType> NoteTypes { get; private set; }
+        private Note Note { get; }
 
         public NoteDetailsViewModel()
         {
             NoteTypeService = new NoteTypeService(new NoteTypeRepository(new NoteKeeperDbContext()));
 
             NoteTypes = new List<NoteType>();
+            Note = new Note() { Text = "", Title = "" };
 
             Load();
         }
 
-        private Note _selectedNote;
 
-        public Note SelectedNote
+        public string NoteTitle
         {
             get 
-            {
-                if (_selectedNote == null)
-                {
-                    return new Note()
-                    {
-                        Text = "",
-                        Title = "",
-                        NoteType = new NoteType() { Name = "ASd"}
-                    };
-                }
-
-                return _selectedNote; 
-            }
-            set 
             { 
-                _selectedNote = value;
+                return Note.Title; }
+            set 
+            {
+                Note.Title = value;
+                OnPropertyChanged();
             }
         }
+
+
+        public string NoteText
+        {
+            get 
+            { 
+                return Note.Text; 
+            }
+            set
+            {
+                Note.Text = value;
+                OnPropertyChanged();
+            }
+        }
+
 
 
         public  void Load()
