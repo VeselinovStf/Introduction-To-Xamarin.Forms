@@ -9,6 +9,7 @@ namespace NoteKeeper.Views
         public NoteDetailsPage()
         {
             InitializeComponent();
+
         }
 
         private void CancelNote_Clicked(object sender, System.EventArgs e)
