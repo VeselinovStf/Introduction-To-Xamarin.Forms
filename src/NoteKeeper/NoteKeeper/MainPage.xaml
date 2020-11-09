@@ -6,4 +6,22 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add Note" Clicked="NoteDetailsPage_Clicked" />
     </ContentPage.ToolbarItems>
+    <StackLayout>
+        <ListView x:Name="ItemsListView"
+                  ItemsSource="{Binding NotesList}"
+                  RefreshCommand="{Binding LoadItemsCommand}"
+                  ItemSelected="OnItemSelected"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Title}" LineBreakMode="WordWrap" Scale="1" FontAttributes="Bold" />
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

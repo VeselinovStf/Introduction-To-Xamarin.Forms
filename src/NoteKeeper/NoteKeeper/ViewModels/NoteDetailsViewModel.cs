@@ -9,20 +9,30 @@ namespace NoteKeeper.ViewModels
     public class NoteDetailsViewModel : BaseViewModel
     {
         private readonly NoteTypeService NoteTypeService;
-
+        
         public List<NoteType> NoteTypes { get; private set; }
         private Note Note { get; }
 
-        public NoteDetailsViewModel()
+        public NoteDetailsViewModel(Note note = null)
         {
             NoteTypeService = new NoteTypeService(new NoteTypeRepository(new NoteKeeperDbContext()));
 
             NoteTypes = new List<NoteType>();
-            Note = new Note() { Text = "", Title = "" };
+
+            if (note != null)
+            {
+                Note = note;
+            }
+            else
+            {
+                Note = new Note() { Text = "", Title = "" };
+            }
+            
 
             Load();
         }
 
+        
 
         public string NoteTitle
         {

@@ -15,10 +15,8 @@ namespace NoteKeeper.Data
         }
 
         public IList<NoteType> GetAll()
-        {
-           
-                return this._dbContext.NoteTypes;
-            
+        {          
+                return this._dbContext.NoteTypes;            
         }
     }
 }
