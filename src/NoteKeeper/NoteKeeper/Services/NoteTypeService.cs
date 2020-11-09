@@ -9,14 +9,14 @@ namespace NoteKeeper.Services
     {
         private readonly NoteTypeRepository _noteTypeRepository;
 
-        public NoteTypeService(IAsyncRepository<NoteType> noteTypeRepository)
+        public NoteTypeService(IRepository<NoteType> noteTypeRepository)
         {
             _noteTypeRepository = (NoteTypeRepository)noteTypeRepository;
         }
 
-        public async Task<IList<NoteType>> GetAllNoteTypesAsync()
+        public IList<NoteType> GetAllNoteTypes()
         {
-            return await this._noteTypeRepository.GetAllAsync();
+            return  this._noteTypeRepository.GetAll();
         }
     }
 }

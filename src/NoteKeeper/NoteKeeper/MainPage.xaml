@@ -4,6 +4,6 @@
              x:Class="NoteKeeper.MainPage"
              Title="Note Keeper">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Note" Clicked="AddNote_Clicked" />
+        <ToolbarItem Text="Add Note" Clicked="NoteDetailsPage_Clicked" />
     </ContentPage.ToolbarItems>
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using NoteKeeper.Views;
+﻿using NoteKeeper.ViewModels;
+using NoteKeeper.Views;
 
 using Xamarin.Forms;
 
@@ -11,9 +12,9 @@ namespace NoteKeeper
             InitializeComponent();
         }
 
-        async void AddNote_Clicked(object sender, System.EventArgs e)
+        async void NoteDetailsPage_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new NoteDetailsPage()));
+            await Navigation.PushModalAsync(new NavigationPage(new NoteDetailsPage(new NoteDetailsViewModel())));
         }     
     }
 }

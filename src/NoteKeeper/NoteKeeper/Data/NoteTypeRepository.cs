@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace NoteKeeper.Data
 {
     //In-Memory Db
-    public class NoteTypeRepository : IAsyncRepository<NoteType>
+    public class NoteTypeRepository : IRepository<NoteType>
     {
         private readonly NoteKeeperDbContext _dbContext;
 
@@ -14,12 +14,11 @@ namespace NoteKeeper.Data
             _dbContext = dbContext;
         }
 
-        public async Task<IList<NoteType>> GetAllAsync()
+        public IList<NoteType> GetAll()
         {
-            return await Task.Run(() => 
-            {
+           
                 return this._dbContext.NoteTypes;
-            });
+            
         }
     }
 }

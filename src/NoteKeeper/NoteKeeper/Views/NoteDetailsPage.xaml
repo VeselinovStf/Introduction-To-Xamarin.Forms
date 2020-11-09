@@ -13,22 +13,18 @@
         Spacing="20"
         Padding="15"
         >
-            <Editor 
+            <Editor Text="{Binding SelectedNote.Title}"
             Placeholder="Title" 
             x:Name="noteTitle"
             FontSize="Medium"/>
             <Picker Title="Note Categy" 
+                    ItemsSource="{Binding NoteTypes}"  
+                    SelectedItem="{Binding SelectedNote.NoteType}"
                 FontSize="Medium"
-                x:Name="noteTypes">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Course 1</x:String>
-                        <x:String>Course 2</x:String>
-                        <x:String>Course 3</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
+                x:Name="noteTypes"/>
+
             <Editor 
+                Text="{Binding SelectedNote.Text}"
             Placeholder="Content" 
             x:Name="noteContent" 
             FontSize="Medium"

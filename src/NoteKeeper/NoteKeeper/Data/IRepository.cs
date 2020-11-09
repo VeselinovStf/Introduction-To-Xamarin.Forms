@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace NoteKeeper.Data
 {
-    public interface IAsyncRepository<T>
+    public interface IRepository<T>
     {
-        Task<IList<T>> GetAllAsync();
+        IList<T> GetAll();
     }
 }

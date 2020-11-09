@@ -6,6 +6,6 @@ namespace NoteKeeper.Services
 {
     public interface INoteTypeService
     {
-        Task<IList<NoteType>> GetAllNoteTypesAsync();
+        IList<NoteType> GetAllNoteTypes();
     }
 }
