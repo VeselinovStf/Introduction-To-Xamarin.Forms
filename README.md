@@ -1,7 +1,7 @@
 # Introduction-To-Xamarin.Forms
 "Introduction To Xamarin.Forms" Pluralsight course repository
 
-![course project image]()
+![course project image](https://github.com/VeselinovStf/Introduction-To-Xamarin.Forms/blob/main/repoImg/demo.bmp)
 
 "Learn the skills necessary to create multi-platform applications with Xamarin.Forms 
 that provide a rich user experience and run natively across iOS, Android, and Universal 
