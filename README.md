@@ -1,6 +1,8 @@
 # Introduction-To-Xamarin.Forms
 "Introduction To Xamarin.Forms" Pluralsight course repository
 
+![course project image]()
+
 "Learn the skills necessary to create multi-platform applications with Xamarin.Forms 
 that provide a rich user experience and run natively across iOS, Android, and Universal 
 Windows Platform (UWP) from a single, shared C# code base. "
@@ -22,3 +24,19 @@ what Xamarin.Forms provides: coding efficiency. With Xamarin.Forms, you’re abl
  between the app pages while maintaining proper separation between the layers of your MVVM 
  architecture. By the end of the course, you'll have the skills and knowledge necessary to 
  start creating cross-platform apps with Xamarin.Forms."
+
+ ## Course 
+
+- Course Overview
+
+- Building Your First App
+
+- Working with Views and Layouts
+
+- Adding Functionality and Interactivity
+
+- Connecting UI and Data with Data Binding
+
+- Managing Data Presentation with Model-View-ViewModel
+
+- Creating a Multi-page App Experience
